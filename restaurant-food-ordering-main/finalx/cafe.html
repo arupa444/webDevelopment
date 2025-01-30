@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Hotel: Home</title>
+    <link rel="stylesheet" href="styleCafe.css" type="text/css">
+</head>
+<body>
+    <div class="header">
+    <h1>The Grand Hotel</h1>
+    </div>
+    <div class="nav">
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="suite.html">Suite</a></li>
+              <li><a href="cafe.html" class="cafe">Cafe</a></li>
+              <li><a href="restaurant.html" class="restaurant">Restaurant</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+    <div class="welcome">
+        <div class="cofe">
+            <img src="cofe.png" class="cofeImg">
+        </div>
+        <div class="time">
+            <h1 >About Our Ca<red>f</red>e</h1>
+            <h6>___________________________________</h6>
+            <p style="font-size: 20px;">Time And Food Wait For None !!</p>
+            <p><br><br><red>Mon</red>day - 7:00 AM to 8:45 PM</p>
+            <p><red>Tues</red>day - 7:00 AM to 9:00 PM</p>
+            <p><red>Wednes</red>day - 7:00 AM to 9:00 PM</p>
+            <p><red>Thurs</red>day - 7:00 AM to 9:00 PM</p>
+            <p><red>Fri</red>day - 7:00 AM to 9:00 PM</p>
+            <p><red>Satur</red>day - 7:00 AM to 11:00 PM</p>
+            <p><red>Sun</red>day - 7:00 AM to 8:45 PM</p>
+        </div>
+    </div>
+    <p><br><br><br></p>
+    <div class="welcome">
+        <div class="time">
+            <h1 >Content Of The ME<red>N</red>U</h1>
+            <h3>OR<RED>D</RED>ER</h3>
+            <h6>___________________________________</h6>
+            <div style="position: relative;">
+                <br><br>
+                <form action="cafe.php" method="POST">
+            <ul>
+                <li>
+                    <select name="pasta" id="pasta">
+                        <option selected disabled>-PASTA-</option>
+                        <option value="WHITE SAUCE PASTA">WHITE SAUCE PASTA rs139</option>
+                        <option value="RED SAUCE PASTA">RED SAUCE PASTA rs139</option>
+                        <option value="MIX SAUCE PASTA">MIX SAUCE PASTA rs159</option>
+                        <option value="MAC & CHEESE">MAC & CHEESE rs159</option>
+                        <option value="MASHROOM PASTA">MASHROOM PASTA rs159</option>
+                        <option value="CHEESY PERI PERI">CHEESY PERI PERI rs159</option>
+                        <option value="TANDOORI CHICKEN">TANDOORI CHICKEN rs199</option>
+                        <option value="BUTTER CHICKEN">BUTTER CHICKEN rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="pizza" id="pizza">
+                        <option selected disabled>-PIZZA-</option>
+                        <option value="MARGHERITA">MARGHERITA rs139</option>
+                        <option value="CHEESE &CORN">CHEESE &CORN rs139</option>
+                        <option value="CHEESE &TOMATO">CHEESE &TOMATO rs159</option>
+                        <option value="ONION &CAPSICUM">ONION &CAPSICUM rs159</option>
+                        <option value="DOUBLE CHEESE">DOUBLE CHEESE rs159</option>
+                        <option value="MARGHERTIA">MARGHERTIA rs159</option>
+                        <option value="VEGGIE LOVER">VEGGIE LOVER rs199</option>
+                        <option value="PEPPY PANEER">PEPPY PANEER rs199</option>
+                        <option value="FARMHOUSE">FARMHOUSE rs139</option>
+                        <option value="MASHROOM & ONION">MASHROOM & ONION rs159</option>
+                        <option value="SPECIAL NACHOS">SPECIAL NACHOS rs159</option>
+                        <option value="CHEESY FRIES">CHEESY FRIES rs159</option>
+                        <option value="BARBEQUE">BARBEQUE rs159</option>
+                        <option value="TANDOORI">TANDOORI rs199</option>
+                        <option value="TIKKA">TIKKA rs199</option>
+                        <option value="MAKHNI">MAKHNI rs199</option>
+                    </select></li>
+                <li>
+                    <select name="burger" id="burger">
+                        <option selected disabled>-BURGER-</option>
+                        <option value="ALOO TIKKK">ALOO TIKKKI rs139</option>
+                        <option value="VEGGIE">VEGGIE rs159</option>
+                        <option value="PANEER">PANEER rs159</option>
+                        <option value="CHEESECHEESE">CHEESE rs159</option>
+                        <option value="EGG LOVER">EGG LOVER rs159</option>
+                        <option value="CHICKEN">CHICKEN rs199</option>
+                        <option value="CHICKEN ZINGER">CHICKEN ZINGER rs199</option>
+                        <option value="SPECIAL NACHOS">SPECIAL NACHOS rs159</option>
+                        <option value="SUPREME">SUPREME rs159</option>
+                        <option value="KURKURE">KURKURE rs199</option>
+                        <option value="LIQUID CHEESE BURGER">LIQUID CHEESE BURGER rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="fries" id="fries">
+                        <option selected disabled>-FRIES-</option>
+                            <option value="SALTED">SALTED rs139</option>
+                            <option value="CRINKLE FRIES">CRINKLE FRIES rs159</option>
+                            <option value="PERI PERI">PERI PERI rs159</option>
+                            <option value="CRINKLE PERI PERI">CRINKLE PERI PERI rs159</option>
+                            <option value="CHEESY">CHEESY rs159</option>
+                            <option value="RAINBOW FRIES">RAINBOW FRIES rs199</option>
+                            <option value="CHEESE BAKED">CHEESE BAKED rs199</option>
+                            <option value="PIZZA FRIES">PIZZA FRIES rs159</option>
+                            <option value="CHICKEN FINGERS">CHICKEN FINGERS (8pcs) rs159</option>
+                            <option value="CHICKEN NUGGETS">CHICKEN NUGGETS (8pcs) rs199</option>
+                            <option value="POTATO TWISTER">POTATO TWISTER rs199</option>
+                            <option value="PANEER POPCORN">PANEER POPCORN rs159</option>
+                            <option value="PANEER CHEESE FINGERS">PANEER CHEESE FINGERS rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="garlicBread" id="garlicBread">
+                        <option selected disabled>-GARLIC BREAD-</option>
+                        <option value="PLAIN GARLIC BREAD">PLAIN GARLIC BREAD rs159</option>
+                        <option value="CHEESE GARLIC BREAD">CHEESE GARLIC BREAD rs159</option>
+                        <option value="CORN GARLIC BREAD">CORN GARLIC BREAD rs159</option>
+                        <option value="MASHROOM GARLIC BREAD">MASHROOM GARLIC BREAD rs159</option>
+                        <option value="VEGGIE GARLIC BREAD">VEGGIE GARLIC BREAD rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="maggi" id="maggi">
+                        <option selected disabled>-MAGGI-</option>
+                        <option value="MASALAMAGGI">MASALA MAGGI rs159</option>
+                        <option value="DOUBLE MASALA">DOUBLE MASALA rs159</option>
+                        <option value="VEGGIE">VEGGIE rs159</option>
+                        <option value="BUTTER">BUTTER rs159</option>
+                        <option value="CHILLI CHEESE MAGGI">CHILLI CHEESE MAGGI rs199</option>
+                        <option value="CHICKEN MAGGI">CHICKEN MAGGI rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="cornAndNachos" id="cornAndNachos">
+                        <option selected disabled>-CORN & NACHOS-</option>
+                        <option value="PLAIN NACHOS">PLAIN NACHOS rs139</option>
+                        <option value="CHEESY NACHOS">CHEESY NACHOS rs159</option>
+                        <option value="CHEESY BREAD NACHOS">CHEESY BREAD NACHOS rs159</option>
+                        <option value="NACHOS CHAT">NACHOS CHAT rs159</option>
+                        <option value="SWEET CORN">SWEET CORN rs159</option>
+                        <option value="CORN CHAT">CORN CHAT rs199</option>
+                    </select>
+                </li>
+                <li>
+                    <select name="sandwiches" id="sandwiches">
+                        <option selected disabled>-SANDWICHES-</option>
+                        <option value="REGULAR">REGULAR rs139</option>
+                        <option value="CHEESE & CORN">CHEESE & CORN rs159</option>
+                        <option value="GRILLED CHEESE">GRILLED CHEESE rs159</option>
+                        <option value="GRILLED CHICKEN">GRILLED CHICKEN rs159</option>
+                        <option value="TANDOORI">TANDOORI rs159</option>
+                        <option value="TIKKA">TIKKA rs199</option>
+                        <option value="CLUB">CLUB rs199</option>
+                </select>
+            </li>
+                <li>
+                    <select name="chillers" id="chillers">
+                        <option selected disabled>-CHILLERS-</option>
+                        <option value="LEMON MINT ICED TEA">LEMON MINT ICED TEA rs139</option>
+                        <option value="PEACH ICED TEA">PEACH ICED TEA rs159</option>
+                        <option value="BLACK CURRANT ICED TEA">BLACK CURRANT ICED TEA rs159</option>
+                        <option value="VIRGIN MOJITO">VIRGIN MOJITO rs159</option>
+                        <option value="GREEN APPLE MOJITO">GREEN APPLE MOJITO rs159</option>
+                        <option value="WATERMELLON MOJITO">WATERMELLON MOJITO rs199</option>
+                        <option value="MANGO MOJITO">MANGO MOJITO rs199</option>
+                        <option value="PINA COLADA">PINA COLADA rs159</option>
+                        <option value="MIDNIGHT COOLER">MIDNIGHT COOLER rs159</option>
+                        <option value="ANY ICED TEA PITCHER">ANY ICED TEA PITCHER rs199</option>
+                        <option value="ANY MOJITO PITCHER">ANY MOJITO PITCHER rs199</option>
+                </select>
+            </li>
+                <li>
+                    <select name="hotBeverages" id="hotBeverages">
+                        <option selected disabled>-HOT BEVERAGES-</option>
+                        <option value="TEA">TEA rs139</option>
+                        <option value="CARDAMOM">CARDAMOM TEA rs159</option>
+                        <option value="MASALA TEA">MASALA TEA rs139</option>
+                        <option value="GINGER TEA">GINGER TEA rs159</option>
+                        <option value="COFFEE">COFFEE rs159</option>
+                        <option value="BLACK COFFEE">BLACK COFFEE rs159</option>
+                        <option value="CARAMEL COFFEE">CARAMEL COFFEE rs159</option>
+                        <option value="HAZELNUT COFFEE">HAZELNUT COFFEE rs199</option>
+                        <option value="IRISH COFFEE">IRISH COFFEE rs199</option>
+                        <option value="HOT CHOCOLATE">HOT CHOCOLATE rs139</option>
+                        <option value="CHOCOLATE COFFEE">CHOCOLATE COFFEE rs159</option>
+                        <option value="BREWIN SPL. COFFEE">BREWIN SPL. COFFEE rs159</option>
+                </select>
+            </li>
+                <li>
+                    <select name="coldCoffee" id="coldCoffee">
+                        <option selected disabled>-COLD COFFEE-</option>
+                        <option value="REGULAR">REGULAR rs139</option>
+                        <option value="BUTTERSCOTCH">BUTTERSCOTCH rs159</option>
+                        <option value="HAZELNUT">HAZELNUT rs159</option>
+                        <option value="MOCHA">MOCHA rs159</option>
+                        <option value="CARAMEL">CARAMEL rs159</option>
+                        <option value="BANANA EXPRESSO">BANANA EXPRESSO rs199</option>
+                        <option value="BROWNIE">BROWNIE rs199</option>
+                        <option value="OREO">OREO rs139</option>
+                </select>
+            </li>
+                <li>
+                    <select name="freakSnakes" id="freakSnakes">
+                        <option selected disabled>-FREAK SNAKES-</option>
+                        <option value="LITTLE HEART">LITTLE HEART rs199</option>
+                        <option value="STRAWBERRY CAKE">STRAWBERRY CAKE rs199</option>
+                        <option value="CHOCOLATE CAKE">CHOCOLATE CAKE rs199</option>
+                        <option value="CHOCO NUTTEY">CHOCO NUTTEY rs199</option>
+                        <option value="COOKIE MONSTER">COOKIE MONSTER rs299</option>
+                </select>
+            </li>
+                <li>
+                    <select name="waffles" id="waffles">
+                        <option selected disabled>-WAFFLES-</option>
+                        <option value="CLASSIC">CLASSIC rs99 (crushed nuts, maple syrup, vanilla ice cream)</option>
+                        <option value="BREWIN SPECIAL">BREWIN SPECIAL rs169 (brownie, white chocolate, in house Nutella Choco chips, vanilla ice cream)</option>
+                        <option value="FRUITILICIOUS">FRUITILICIOUS rs159 (loaded fruits, vanilla ice cream)</option>
+                        <option value="BANOFFEE PIE">BANOFFEE PIE rs159 (banana, caramel, whipped cream, crushed cookies, vanilla ice cream)</option>
+                        <option value="BROWNIE">BROWNIE rs159 (in house Nutella, brownie, dark chocolate, white chocolate, vanilla ice cream)</option>
+                        <option value="STRAWBERRY">STRAWBERRY rs119 (fresh strawberries, whipped cream, vanilla ice cream)</option>
+                        <option value="MANGO(SEASONAL)">MANGO(SEASONAL) rs119 (fresh mangoes, maple syrup, vanilla ice cream</option>
+                        <option value="BLUEBERRY">BLUEBERRY rs129 (frozen blueberries, maple syrup, vanilla ice cream)</option>
+                        <option value="NUTELLA">NUTELLA rs129 (inhouse Nutellam Crushed Nuts And Vanilla Ice Cream)</option>
+                        <option value="ALL WHITE">ALL WHITE rs119 (white chocolate, Choco chips, vanilla ice cream)</option>
+                        <option value="COFFEE WAFFLE">COFFEE WAFFLE rs149 (coffee Flavoured Waffle, White Chocolate, Dark Chocolate And Vanilla Ice Cream)</option>
+                        <option value="KITKAT">KITKAT rs149 (in house Nutella, crushed KitKat, vanilla ice cream)</option>
+                        <option value="OREO WAFFLE">OREO rs149 (crushed Oreo, in house Nutella, brownie, white chocolate, dark chocolate, vanilla ice cream)</option>
+                </select>
+            </li>
+                <li>
+                    <select name="snakes" id="snakes">
+                        <option selected disabled>-SNAKES-</option>
+                        <option value="VANILLA">VANILLA rs139</option>
+                        <option value="STRAWBERRY">STRAWBERRY rs159</option>
+                        <option value="BUTTERSCOTCH">BUTTERSCOTCH rs159</option>
+                        <option value="CHOCOLATE">CHOCOLATE rs159</option>
+                        <option value="CHOCOLATE BANANA">CHOCOLATE BANANA rs159</option>
+                        <option value="BLACK CURRANT">BLACK CURRANT rs199</option>
+                        <option value="HAZELNUT">HAZELNUT rs199</option>
+                        <option value="CARAMEL">CARAMEL rs139</option>
+                        <option value="BUBBLEGUM">BUBBLEGUM rs159</option>
+                        <option value="PEANUT BUTTER BANANA">PEANUT BUTTER BANANA rs159</option>
+                </select>
+            </li>
+                <li>
+                    <select name="plattersAndCombos" id="plattersAndCombos">
+                        <option selected disabled>-PLATTERS & COMBOS-</option>
+                        <option value="FRIES">FRIES rs249 (Peri peri, nuggets, twister, crinkle, smileys)</option>
+                        <option value="ALL IN ONE">ALL IN ONE rs549 (2 slice Pizza, Garlic Bread (2pcs), Sandwich, Burger, Fries, Cold Coffee)</option>
+                        <option value="CLASSIC COMBO">CLASSIC COMBO rs199 (Aloo Tikki, Salted Fries, Cold Coffee/chiller)</option>
+                        <option value="STANDARD COMBO">STANDARD COMBO rs299 (Tandoori/makhni/tikka pizza, cheese garlic bread, cold coffee/chiller)</option>
+                        <option value="MEGA COMBO">MEGA COMBO rs599 (tandoori /makhni/tikka Pizza, Red/white Pasta, Aloo Tikki Burger/cheese Garlic Bread (4pieces) 2 Cold Coffee/chillers)</option>
+                    </select>
+                </li>
+            </ul>
+            <br><br><br>
+            <div class="submit">
+                <input type="submit" name="submit" value="ORDER" class="order">
+                <input type="reset" value="RESET ORDER" class="reset">
+            </div>
+                </form>
+            <img src="braces.png" class="brace">
+            </div>
+        </div>
+        <div>
+            <img src="food.png" class="menu">
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="footer">
+        <footer>
+            <p>Copyright © 2023 The Grand Hotel</p>
+        </footer>
+    </div>
+
+</body>
+</html>

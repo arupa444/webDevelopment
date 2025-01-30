@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+  
+  .header {
+    background-color: #F5F5DC;
+    color: ##0d0000;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #0d0000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+  }
+  
+  nav a:hover,
+  nav a.cafe{
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  .order{
+    text-align: left;
+  }
+  .welcome{
+    display: flex;
+    justify-content: space-between;
+  }
+  .time h1{
+    font-family: copperplate,fantasy;
+    font-size: 60px;
+  }
+  .time ul li{
+    list-style: none;
+    padding-left: 80px;
+  }
+  .cofeImg{
+    width: 500px;
+    height: 500px;
+  }
+  .menu{
+    width: 500px;
+    height: 500px;
+    padding-top: 100px;
+  }
+  .brace{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  red{
+    color: red;
+  }
+  .time ul li select{
+    appearance: none;
+    height: 20px;
+    width: 255px;
+    background: #D2B48C;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    box-shadow: none;
+    outline: 0;
+    background-image: none;
+    border: 0;
+  }
+  .order{
+    height: 25px;
+    background: #D2B48C;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  .reset{
+    height: 25px;
+    background: #D2B48C;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  .submit{
+    padding-left: 200px;
+  }
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: bot;
+  }
+
+
+
+
+  html{
+    position:relative; 
+    min-height: 100%;
+  }
+  /*Normalize html and body elements,this style is just good to have*/
+  html,body{
+    margin:0;
+    padding:0;
+  }
+  .container{
+    margin-bottom:100px;/* Height of footer*/
+  } 
+  .footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height:100px;
+      background:#ccc;
+  }
+  
