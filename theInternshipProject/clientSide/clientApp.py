@@ -8,7 +8,7 @@ def create_app():
     app = Flask(__name__)
     app.secret_key = os.urandom(24)
     mongo_uri = os.environ.get("MONGODB_URI")
-    client = MongoClient(mongo_uri) if mongo_uri else MongoClient("mongodb+srv://tljne:4BMNBXEZS7gqrnqM@tljne.gw0jc.mongodb.net/")
+    client = MongoClient(mongo_uri) if mongo_uri else MongoClient("Can't share the database!!") # use your own one if you want to use
     db = client["tljne"]
     return app, db
 
