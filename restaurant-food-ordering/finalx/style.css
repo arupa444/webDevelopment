@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D2B48C;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #F5F5DC;
+    color: ##0d0000;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #0d0000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .welcome h2, .services h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+  
+  .services li {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    position: bot;
+  }
+
+
+
+
+  html{
+    position:relative; 
+    min-height: 100%;
+  }
+  /*Normalize html and body elements,this style is just good to have*/
+  html,body{
+    margin:0;
+    padding:0;
+  }
+  .container{
+    margin-bottom:100px;/* Height of footer*/
+  } 
+  .footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height:100px;
+      background:#ccc;
+  }
+  
