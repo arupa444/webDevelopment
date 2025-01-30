@@ -1,0 +1,73 @@
+h1{
+    color: rgb(62, 102, 113);
+}
+/* h3{
+    visibility: hidden;
+} */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    text-align: center;
+}
+.xColor{
+    color: pink;;
+}
+.container{
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.game{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    font-size: 8vmin;
+}
+
+.someNewStyle{
+    color: blue;
+}
+
+.visible{
+    visibility: hidden;
+}
+
+/* button{
+    padding: 10px;
+    background-color: black;
+    color : white;
+    margin-top: 20px;
+    margin: 30px;
+} */
+button{
+    background-color: rgb(62, 102, 113);
+    color : white;
+}
+.troopButton{
+    font-size: 2rem;
+    padding: 20px;
+    background-color: black;
+    color : white;
+    margin-top: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.lightBody{
+    color : black;
+    background-color: white;
+}

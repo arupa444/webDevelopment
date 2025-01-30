@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(194, 185, 136);
+}
+container{
+    height: 60vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+game{
+    height: 60vmin;
+    width: 100vmin;
+    display: flex;
+    justify-content: space-around;
+    /* font-size: 4rem; */
+    align-items: center;
+    /* border-right: 12px solid red;
+    border-left: 12px solid red; */
+}
+.visible{
+    visibility: hidden;
+}
+.troopButton{
+    font-size: 5rem;
+    padding: 20px;
+    background-color: black;
+    color : white;
+    margin-top: 20px;
+    margin: 30px;
+    border-radius: 10px;
+}
