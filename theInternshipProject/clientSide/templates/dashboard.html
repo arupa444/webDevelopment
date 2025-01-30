@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* General Theme Changes */
+        body {
+            background-image: url('/static/logo.png'); /* Replace with the path to your logo */
+            background-repeat: no-repeat;
+            background-position: center center; /* Adjust position if needed */
+            background-size: 40%; /* Adjust size as needed */
+            background-attachment: fixed;
+            background-color: #f8f9fa;
+            color: #212529;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+         body::before { /* Apply overlay */
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(248, 249, 250, 0.6); /* Light white overlay with transparency */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 90vw;
+            margin: 0 auto;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border: none;
+
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0;
+            color: #212529;
+             border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 1.5rem;
+            border-radius: 8px 8px 0 0;
+              position: relative;/* Added for absolute position context */
+        }
+        .card-header h2 {
+            margin-bottom: 0;
+            flex-grow: 1;
+         }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        h1, h2 {
+            color: #212529;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+
+        /* Table Styles */
+        .table th {
+            background-color: #e0e0e0;
+            color: #212529;
+            font-weight: 500;
+            border-bottom: 2px solid #d0d0d0;
+        }
+
+        .table td {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            white-space: pre-wrap;
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border-color: #e0e0e0;
+        }
+
+        /* Button Styles */
+        .btn-primary {
+            background-color: #a3a38c;
+            border-color: #a3a38c;
+        }
+
+        .btn-primary:hover {
+            background-color: #90907c;
+            border-color: #90907c;
+        }
+
+        .btn-success {
+            background-color: #8cb370;
+            border-color: #8cb370;
+        }
+
+        .btn-success:hover {
+            background-color: #7da460;
+            border-color: #7da460;
+        }
+
+        .btn-warning {
+            background-color: #f0c78a;
+            border-color: #f0c78a;
+            color: #212529;
+        }
+
+        .btn-warning:hover {
+            background-color: #e2b371;
+            border-color: #e2b371;
+            color: #212529;
+        }
+
+        .btn-danger {
+            background-color: #e77e6c;
+            border-color: #e77e6c;
+        }
+
+        .btn-danger:hover {
+            background-color: #d86a58;
+            border-color: #d86a58;
+        }
+
+        .btn {
+            border-radius: 6px;
+            font-weight: 500;
+             padding: 0.4rem .8rem;
+        }
+
+         .btn-link {
+            color: #212529;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            padding: 0;
+            font-weight: 500;
+        }
+         .btn-link:hover {
+            color: #a3a38c;
+            text-decoration: underline;
+        }
+
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 8px;
+        }
+
+        .modal-header {
+             background-color: #f0f0f0;
+            border-bottom: 1px solid #e0e0e0;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .modal-title {
+            color: #212529;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-footer {
+            border-top: 1px solid #e0e0e0;
+            padding: 1.5rem;
+        }
+
+        /* Form Control Styles */
+        .form-control {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+             background-color: #fff;
+            color: #212529;
+        }
+
+        .form-control:focus {
+           border-color: #a3a38c;
+            box-shadow: 0 0 0 0.25rem rgba(163, 163, 140, 0.25);
+        }
+
+       /* Toast Styles */
+        .toast-container {
+            z-index: 1050;
+        }
+
+        .toast {
+             background-color: #b3d89c;
+            border-radius: 8px;
+            color: #212529;
+        }
+
+        .toast .btn-close {
+            filter: invert(1);
+        }
+         .edit-collection-form {
+              position: absolute;
+              top: 5px;
+              right: 40px;
+              display: none;
+          }
+        .edit-collection-form.show {
+              display: block;
+        }
+        .edit-collection-btn{
+             padding: 0;
+               background-color: transparent;
+                border: none;
+                cursor: pointer;
+                 margin-right:0.7rem ;
+
+          }
+        .edit-collection-btn:hover {
+            color: #a3a38c;
+
+        }
+         .form-container {
+            position: relative;
+
+        }
+         .delete-collection-btn {
+              padding: 0;
+               background-color: transparent;
+                border: none;
+               cursor: pointer;
+              margin-right:0.7rem ;
+              }
+         .delete-collection-btn:hover {
+                color: #d86a58;
+        }
+
+        @media (max-width: 768px) {
+            .container{
+                 max-width: 98vw;
+            }
+         }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Dashboard</h1>
+
+    <!-- Bootstrap Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body" id="toastMessage">
+                    Action completed successfully!
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+      <!-- Search Collections -->
+      <div class="card">
+         <div class="card-body">
+           <div class="form-container">
+                 <form action="/" method="POST" class="d-flex gap-2" >
+                    <input type="text" class="form-control" name="search_term" placeholder="Search Collections" value="{{ search_term if search_term }}" required>
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+            </div>
+           </div>
+       </div>
+    <!-- Add New Collection Form -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Add New Collection</h2>
+            </div>
+            <div class="card-body">
+               <div class="form-container">
+                <form id="addCollectionForm" action="/add_collection" method="POST" class="d-flex gap-2" onsubmit="showToast('Collection Created Successfully')">
+                    <input type="text" name="collection_name" placeholder="Collection Name" class="form-control" required>
+                    <input type="text" name="keys" placeholder="Keys (comma-separated)" class="form-control" required>
+                    <button type="submit" class="btn btn-success">Create</button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+        <!-- List collections -->
+        {% if filtered_collections %}
+            {% for collection in filtered_collections %}
+                <div class="card">
+                    <div class="card-header">
+                        <h2  >{{ collection }}</h2>
+                          <div class="d-flex">
+                            <button class="edit-collection-btn" onclick="toggleRenameForm('{{collection}}', this)"><i class="fas fa-edit"></i></button>
+                           <form action="/delete_collection/{{ collection }}" method="POST" style="display: inline;" onsubmit="return confirmDeleteCollection()">
+                                   <button type="submit" class="delete-collection-btn" ><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
+                           <form  id="renameForm{{collection}}" class="edit-collection-form" action="/rename_collection/{{ collection }}" method="POST" onsubmit="return confirmRename(this)">
+                              <div class="mb-2 d-flex gap-2">
+                                   <input type="text" class="form-control form-control-sm" name="new_name" placeholder="New name"  value="{{ collection }}" required>
+                                   <button class="btn btn-success btn-sm" type="submit">save</button>
+                              </div>
+                           </form>
+                      </div>
+                      <div class="card-body">
+                         <a href="/collection/{{ collection }}" class="btn-link fs-5" >Go to <span class="text-primary">{{ collection }}</span> Collection »</a>
+                       </div>
+                </div>
+            {% endfor %}
+        {% else %}
+              {% for collection in collections %}
+                <div class="card">
+                    <div class="card-header">
+                        <h2  >{{ collection }}</h2>
+                          <div class="d-flex">
+                            <button class="edit-collection-btn" onclick="toggleRenameForm('{{collection}}', this)"><i class="fas fa-edit"></i></button>
+                           <form action="/delete_collection/{{ collection }}" method="POST" style="display: inline;" onsubmit="return confirmDeleteCollection()">
+                                   <button type="submit" class="delete-collection-btn" ><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
+                           <form  id="renameForm{{collection}}" class="edit-collection-form" action="/rename_collection/{{ collection }}" method="POST" onsubmit="return confirmRename(this)">
+                              <div class="mb-2 d-flex gap-2">
+                                   <input type="text" class="form-control form-control-sm" name="new_name" placeholder="New name"  value="{{ collection }}" required>
+                                   <button class="btn btn-success btn-sm" type="submit">save</button>
+                              </div>
+                           </form>
+                      </div>
+                      <div class="card-body">
+                         <a href="/collection/{{ collection }}" class="btn-link fs-5" >Go to <span class="text-primary">{{ collection }}</span> Collection »</a>
+                       </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+</div>
+<!-- JavaScript for Alerts -->
+<script>
+     // Show toast notification
+    function showToast(message) {
+        const toastMessage = document.getElementById('toastMessage');
+        toastMessage.innerText = message;
+        const toast = new bootstrap.Toast(document.getElementById('liveToast'));
+        toast.show();
+    }
+
+     function toggleRenameForm(collection, button) {
+        const form = document.getElementById(`renameForm${collection}`);
+        form.classList.toggle('show');
+         const input = form.querySelector('input[name="new_name"]');
+            if (form.classList.contains('show')) {
+                input.focus()
+            }
+        else {
+            button.focus();
+            }
+
+    }
+      function confirmDeleteCollection() {
+         return confirm('Are you sure you want to delete this collection? This will delete data and the collection permanently');
+      }
+
+    //confirm rename action
+    function confirmRename(form) {
+        return confirm('Are you sure you want to rename this?');
+      }
+
+</script>
+</body>
+</html>
