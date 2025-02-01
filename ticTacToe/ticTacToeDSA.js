@@ -12,7 +12,6 @@ var tictactoe = function(moves) {
     ]
     const store = new Map();
     moves.forEach((ele,index) =>{
-        // console.log(index);
         if(index % 2 == 0)
             store[(ele[0]*3)+ele[1]] = "X";
         else
